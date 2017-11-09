@@ -1,0 +1,6 @@
+{
+	"deploy": {
+		"module":"rvw_project.wsgi:application",
+		"managetasks":["migrate", "createsuperuser_automatic"]
+	}
+}
