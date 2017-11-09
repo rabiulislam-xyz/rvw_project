@@ -1,4 +1,4 @@
 # Rabiuls Virtual World
 
 demo project for my personal website.
-live demo: 
+live demo: www.rabiulislam.herokuapp.com
