@@ -1,0 +1,14 @@
+{% extends 'blog/base.html' %}
+
+{% block content %}
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 col-md-offset-3">
+                {% for post in post_list %}
+                    <h1 class="content-title">{{ post.title }}</h1>
+                    <p>{{ post.content|safe|truncatewords:20 }} </p>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+{% endblock %}

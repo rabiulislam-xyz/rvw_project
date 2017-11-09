@@ -1,0 +1,34 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <!-- MetaData -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Rabiul-Islam">
+
+    <title>{% block title %}Welcome to Rabiuls Virtual World!{% endblock %}</title>
+
+    <!-- Favicon icon -->
+    <link rel="icon" type="image/x-icon" href="{% static 'blog/img/favicon.ico' %}"/>
+
+    <!-- Input:CSS -->
+    <link rel="stylesheet" href="{% static 'blog/css/bootstrap.min.css' %}"/>
+    <link rel="stylesheet" href="{% static 'blog/css/intro.css' %}"/>
+    <!-- EndInput -->
+</head>
+
+<body>
+    {% block content %}
+    {% endblock %}
+
+    <!-- Input:js -->
+    <script src="{% static 'blog/js/jquery-3.2.1.min.js' %}"></script>
+    <script src="{% static 'blog/js/ripple.min.js' %}"></script>
+    <script src="{% static 'blog/js/wow.min.js' %}"></script>
+    <script src="{% static 'blog/js/intro.js' %}"></script>
+    <!-- EndInput -->
+</body>
+</html>
