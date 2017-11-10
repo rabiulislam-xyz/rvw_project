@@ -141,7 +141,7 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media_cdn')
 
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_HOST_USER = 'o1935926686@gmail.com'
-EMAIL_HOST_PASSWORD = 'jamdad41033'
+EMAIL_HOST_PASSWORD = os.environ.get('EMAIL_HOST_PASSWORD', '$UP3R$3CR3T')
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
 
