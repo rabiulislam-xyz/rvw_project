@@ -37,9 +37,11 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django.contrib.sites',
 
     # third party apps
     'ckeditor',
+    'disqus',
 
     # custom apps
     'blog',
@@ -142,3 +144,7 @@ EMAIL_HOST_USER = 'o1935926686@gmail.com'
 EMAIL_HOST_PASSWORD = 'jamdad41033g'
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
+
+# disqus settings
+DISQUS_API_KEY = 'XK5TgzZBOzzgCADeH1FVGJvKqRaiDmP10EjD5l3QicjRrgl1EOYDRToShQe6qU3v'
+DISQUS_WEBSITE_SHORTNAME = 'backend-ml'

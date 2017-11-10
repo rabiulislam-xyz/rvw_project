@@ -7,6 +7,10 @@
                 <h1 class="content-title">{{ post.title }}</h1>
                 <p>{{ post.content|safe }} </p>
 
+                {% load disqus_tags %}
+                {% disqus_dev %}
+                {% disqus_show_comments %}
+
                 <hr />
                 <br />
                 <br />
