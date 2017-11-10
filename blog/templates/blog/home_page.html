@@ -1,18 +1,22 @@
 {% extends 'blog/base.html' %}
-
+{% load static %}
 
 {% block content %}
     <div class="cover-wrapper">
         <div class="cover">
             <h2 class="big-txt">আহলান ওয়া সাহলান!</h2>
             <h2 class="banner-headline">রবিউল ইসলামের ভার্চুয়াল দুনিয়ায় আপনাকে স্বাগতম!</h2>
-            <div>
-                <ul>
-                    <li><a href="http://rabiulislam993.blogspot.com/">ব্লগ</a></li>
-                    <li><a href="#">যোগাযোগ</a></li>
-                    <li><a href="{% url 'blog:post_detail' 'আমি' %}">আমি</a></li>
-                </ul>
-            </div>
+
+            {% include 'blog/snippets/nav_links.html' %}
         </div>
     </div>
+{% endblock %}
+
+{% block javascript %}
+    <!-- Input:js -->
+    <script src="{% static 'blog/js/jquery-3.2.1.min.js' %}"></script>
+    <script src="{% static 'blog/js/ripple.min.js' %}"></script>
+    <script src="{% static 'blog/js/wow.min.js' %}"></script>
+    <script src="{% static 'blog/js/intro.js' %}"></script>
+    <!-- EndInput -->
 {% endblock %}

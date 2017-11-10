@@ -133,3 +133,12 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'static_cdn')
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media_cdn')
+
+# email sending settings
+# smtp settings
+
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_HOST_USER = 'o1935926686@gmail.com'
+EMAIL_HOST_PASSWORD = 'jamdad41033g'
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True

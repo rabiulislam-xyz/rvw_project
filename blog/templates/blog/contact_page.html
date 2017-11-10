@@ -1,0 +1,47 @@
+{% extends 'blog/base.html' %}
+
+{% block content %}
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 offset-md-3">
+                {% if sent %}
+                    <h3 class="w3-panel w3-green w3-card-4 wc-center">আপনার বার্তাটি সফলভাবে প্রেরিত হয়েছে!<br/>
+                        <a href="/">হোম পেজ</a>.</h3>
+                    <hr/>
+                {% endif %}
+
+                {% if sent == False %}
+                    <h3 class="w3-panel w3-yellow w3-card-4 wc-center">আপনার বার্তাটি প্রেরন করা যায়নি। আবার
+                        চেষ্টা
+                        করুন অথাবা <a href="http://fb.com/rabiulislam993">সরাসরি যোগাযোগ করুন</a>।</h3>
+                    <hr/>
+                {% endif %}
+
+
+                <form method="POST">
+                    <div class="card">
+                        {{ form.body }}
+                        {% csrf_token %}<br/>
+                        <button class="btn btn-outline-dark"><input type="submit" value="send"/></button>
+                    </div>
+                </form>
+                <hr/>
+                <br/>
+                <div>
+                    <b>Email: </b>
+                    <p>rabiulislam993@live.com</p>
+                    <b>Github: </b>
+                    <p>https://github.com/rabiulislam993/</p>
+                    <b>Facebook: </b>
+                    <p>https://www.facebook.com/Rabiul.Islam.993</p>
+                </div>
+
+
+                <hr/>
+                <br/>
+                <br/>
+                <small>{% include 'blog/snippets/nav_links.html' %}</small>
+            </div>
+        </div>
+    </div>
+{% endblock %}
